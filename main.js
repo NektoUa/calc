@@ -1,10 +1,32 @@
-let firstNum;
-let secondNum;
+function count() {
+    let firstNum = +document.querySelector('.argOne').value;
+    let secondNum = +document.querySelector('.argTwo').value;
 
-let outResult = document.getElementById('result');
+    let math = document.querySelector('.math-operation').value;
 
-let result;
+    let sum = '';
+    let outResult = document.getElementById('result');
+
+    if (math == '+') {
+        sum = firstNum + secondNum;
+    }
+    else if (math == '-') {
+        sum = firstNum - secondNum;
+    }
+    else if (math == '*') {
+        sum = firstNum * secondNum;
+    }
+    else {
+        sum = firstNum / secondNum;
+    }
+
+    outResult.innerHTML = sum;
+
+    firstNum = '';
+
+}
+
+document.querySelector('#equal').onclick = count;
 
 
 
-outResult.innerHTML = result;
