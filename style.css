@@ -1,0 +1,8 @@
+section {
+    display: flex;
+    /* flex-direction: column */
+}
+
+#numbers {
+    display: flex;
+}
