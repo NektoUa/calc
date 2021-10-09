@@ -1,8 +1,17 @@
-section {
-    display: flex;
-    /* flex-direction: column */
+#numbers {
+    background-color: blue;
+    display: grid;
+    justify-items: stretch;
+    padding: 20px;
+    margin: 10px;
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+    grid-template-columns: 50px 50px 50px;
 }
 
-#numbers {
-    display: flex;
-}
+.block-keyboard_item {
+    background-color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+} 
