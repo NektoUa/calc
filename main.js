@@ -1,6 +1,14 @@
-function mathOperation(val) {
-
-    console.log(val);
+function mathOperation() {
+    let val = document.querySelector('.input-result').value.split('');
+    let num;
+    for (let i = 0; i < val.length; i++) {
+        if (typeof +val[i] == 'number') {
+            console.log(val[i])
+        }
+        num += val[i]
+        // console.log(typeof +val[i])
+    }
+    // console.log(typeof val);
 }
 
 function addElement() {
@@ -23,10 +31,8 @@ document.querySelector('.input-result').onkeyup = function (event) {
     addElement();
 }
 
-let val = document.querySelector('.input-result').value;
-
-document.querySelector('#equal').onkeyup = function (event) {
-    mathOperation(val)
+document.querySelector('#equal').onclick = () => {
+    mathOperation()
 }
 
 // function count() {
