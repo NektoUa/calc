@@ -3,7 +3,7 @@ function mathOperation() {
     let num;
     for (let i = 0; i < val.length; i++) {
         if (typeof +val[i] == 'number') {
-            console.log(val[i])
+            console.log(val)
         }
         num += val[i]
         // console.log(typeof +val[i])
