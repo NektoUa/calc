@@ -1,6 +1,6 @@
 function mathOperation() {
     let val = document.querySelector('.input-result').value.split('');
-    let num;
+    let num = 2;
     for (let i = 0; i < val.length; i++) {
         if (typeof +val[i] == 'number') {
             console.log(val)
