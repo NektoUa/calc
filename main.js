@@ -1,3 +1,24 @@
+"use strict";
+
+
+
+let inputResult = document.querySelector('.input-result');
+
+let nums = document.querySelector('.nums');
+let equal = document.querySelector('#equal');
+let clear = document.querySelector('#clear');
+
+
+
+function active() {
+    this.classList.toggle('active');
+}
+
+clear.onmousedown = active;
+clear.onmouseup = active;
+
+
+
 function mathOperation() {
     let val = document.querySelector('.input-result').split('');
     let num;
