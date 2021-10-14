@@ -1,14 +1,14 @@
 function mathOperation() {
-    let val = document.querySelector('.input-result').value.split('');
-    let num = 2;
+    let val = document.querySelector('.input-result').split('');
+    let num;
     for (let i = 0; i < val.length; i++) {
         if (typeof +val[i] == 'number') {
             console.log(val)
         }
         num += val[i]
-        // console.log(typeof +val[i])
+
     }
-    // console.log(typeof val);
+
 }
 
 function addElement() {
