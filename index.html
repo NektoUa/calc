@@ -10,51 +10,37 @@
 </head>
 
 <body>
-    <header>
-        <div id='result'>
-            <input type="text" class="input-result">
-        </div>
-    </header>
-    <section>
 
-        <div class='numbers'>
-            <div class="block-keyboard_item nums" data-keyboard="55">7</div>
-            <div class="block-keyboard_item nums" data-keyboard="56">8</div>
-            <div class="block-keyboard_item nums" data-keyboard="57">9</div>
-            <div class="block-keyboard_item nums" data-keyboard="52">4</div>
-            <div class="block-keyboard_item nums" data-keyboard="53">5</div>
-            <div class="block-keyboard_item" data-keyboard="54">6</div>
-            <div class="block-keyboard_item" data-keyboard="49">1</div>
-            <div class="block-keyboard_item" data-keyboard="50">2</div>
-            <div class="block-keyboard_item" data-keyboard="51">3</div>
-            <div class="block-keyboard_item" data-keyboard="48">0</div>
-            <div class="block-keyboard_item">.</div>
-            <div id="clear" class="block-keyboard_item">C</div>
-        </div>
-        <div id="operators">
-            <div class="block-keyboard_item" data-keyboard="107">+</div>
-            <div class="block-keyboard_item" data-keyboard="109">-</div>
-            <div class="block-keyboard_item" data-keyboard="111">/</div>
-            <div class="block-keyboard_item" data-keyboard="106">*</div>
-        </div>
-        <div id='arithmetic'>
-            <!-- <button id='addButton' class="icon-btn add-btn">
-                <div class="add-icon"></div>
-                <div class="btn-txt">Plus</div>
-            </button> -->
-            <div class="form-control">
-                <select class="math-operation">
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                    <option value="*">*</option>
-                    <option value="/">/</option>
-                </select>
-            </div>
-        </div>
-        <button id="equal">=</button>
-
-    </section>
     <script type="text/javascript" src='main.js'></script>
 </body>
+<section class='wrap'>
+    <div class='calc'>
+        <h1>Calculator</h1>
+        <div class="screen">2+2</div>
+        <input type="hidden" class="outcome" value="2+2" />
+        <div class="buttons">
+            <div><a class="clear first-line val">C</a></div>
+            <div><a class="val first-line" href="-">&plusmn;</a></div>
+            <div><a class="val first-line" href="/">&divide;</a></div>
+            <div><a class="val first-line" href="*">&times;</a></div>
+            <div><a class="val numbers" href="7">7</a></div>
+            <div><a class="val numbers" href="8">8</a></div>
+            <div><a class="val numbers" href="9">9</a></div>
+            <div><a class="val numbers" href="-">-</a></div>
+            <div><a class="val numbers" href="4">4</a></div>
+            <div><a class="val numbers" href="5">5</a></div>
+            <div><a class="val numbers" href="6">6</a></div>
+            <div><a class="val numbers" href="+">+</a></div>
+            <div><a class="val numbers" href="1">1</a></div>
+            <div><a class="val numbers" href="2">2</a></div>
+            <div><a class="val numbers" href="3">3</a></div>
+            <div><a class="val equal tall  numbers">=</a></div>
+            <div><a class="val wide shift " href="0">0</a></div>
+            <div><a class="val shift numbers point" href=".">.</a></div>
+        </div>
+    </div>
+
+
+</section>
 
 </html>

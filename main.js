@@ -8,7 +8,7 @@ let nums = document.querySelector('.nums');
 let equal = document.querySelector('#equal');
 let clear = document.querySelector('#clear');
 
-
+let arrayOperation = ['+', '-', '*', '/'];
 
 function active() {
     this.classList.toggle('active');

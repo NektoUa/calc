@@ -1,106 +1,103 @@
-#numbers {
-    background-color: blue;
-    display: grid;
-    justify-items: stretch;
-    padding: 20px;
-    margin: 10px;
-    grid-column-gap: 20px;
-    grid-row-gap: 10px;
-    grid-template-columns: 50px 50px 50px;
+.wrap{
+	width:480px;
+	margin:50px auto 0;
+  font-family:    
+  "Helvetica Neue", Arial, sans-serif;
+  color:#241f1f;
 }
 
-.block-keyboard_item {
-    background-color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
-} 
+.calc {
+  width:480px;
+  text-align: center;
+  height: auto;
+  padding: 10px 0;
+  margin: auto;
+  background: #f2f2f2;
+  border: #010 1px solid; 
+  border-radius: 30px;
+  overflow: hidden;
+  }
 
-.active {
-    background: orange;
+h1 {
+  font-size: 1.2em;
+  color: 
 }
 
-/* красивое расширение кнопки плюс */
-/* .icon-btn {
-    margin-top: 10px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #cdcdcd;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    transition: width 0.2s ease-in-out;
+.screen {
+  width: 90%;
+  height: 80px;
+  margin: 12px auto 30px;
+  padding: 10px 20px;
+  color:#0d0d0d;
+	text-align: right;
+	font-size: 3em;
+  letter-spacing: 3px;
+	overflow:hidden;
+	border:#000 1px solid;
+	border-radius:40px;
+  box-sizing:border-box;
+}
+
+.buttons {
+padding: 0px;
+  width: 95%;
+  margin: 0 7%;
+  overflow: hidden;
   }
 
-  .add-btn:hover {
-    width: 100px;
-    cursor: pointer;
-  }
-  .add-btn::before,
-  .add-btn::after {
-    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
-    content: "";
-    position: absolute;
-    height: 4px;
-    width: 8px;
-    top: calc(50% - 2px);
-    background: blue;
-  }
-  .add-btn::after {
-    right: 14px;
-    overflow: hidden;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-  }
-  .add-btn::before {
-    left: 14px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-  }
-  .icon-btn:focus {
-    outline: none;
-  }
-  .btn-txt {
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .add-btn:hover::before,
-  .add-btn:hover::after {
-    width: 4px;
-    border-radius: 2px;
-  }
-  .add-btn:hover .btn-txt {
-    opacity: 1;
-  }
-  .add-icon::after,
-  .add-icon::before {
-    transition: all 0.3s ease-in-out;
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 2px;
-    top: calc(50% - 10px);
-    background: blue;
-    overflow: hidden;
-  }
-  .add-icon::before {
-    left: 12px;
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-  }
-  .add-icon::after {
-    right: 12px;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-  }
-  .add-btn:hover .add-icon::before {
-    left: 15px;
-    height: 4px;
-    top: calc(50% - 2px);
-  }
-  .add-btn:hover .add-icon::after {
-    right: 15px;
-    height: 4px;
-    top: calc(50% - 2px);
-  } */
+.buttons div {
+display: inline;
+  float: left;
+  padding: 0px;
+  margin-right: 13px;
+  margin-bottom: 10px;
+}
+
+.val {
+  display: block;
+  width: 90px;
+  padding: 10px 0 5px;
+  color: #7a7a7a;
+  font-family: "Myriad Pro", Arial, sans-serif;
+  font-size: 1.5em;
+  background-color:#ede8e8;
+  border: #000 1px solid;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active {
+  box-shadow: inset rgba(0,0,0,0.5) 0px 2px 8px;
+			background-image:linear-gradient(top, #2f2f2f 0%, #363636 100%);
+}
+
+.first-line {
+  height: 30px;
+  border-radius: 50px;
+}
+
+.numbers {
+  padding-top: 33px !important;
+  border-radius: 50px;
+  text-align: center; 
+  height: 50px;
+}
+
+.equal {
+  height: 150px !important;
+}
+
+.wide {
+  width: 200px !important;
+    border-radius: 50px;
+  padding: 30px 0;
+}
+
+.shift {
+  margin-top: -100px
+}
+
+.point {
+  margin-left: -3px;
+}
+
