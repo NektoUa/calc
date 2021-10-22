@@ -66,7 +66,7 @@ display: inline;
   cursor: pointer;
 }
 
-a:active {
+.val:active {
   box-shadow: inset rgba(0,0,0,0.5) 0px 2px 8px;
 			background-image:linear-gradient(top, #2f2f2f 0%, #363636 100%);
 }
