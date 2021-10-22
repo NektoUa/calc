@@ -1,9 +1,10 @@
 "use strict";
 
-let arrayScreen = []
+let arrayScreen = [];
+let out = document.querySelector('.screen');
 
-function deposit(event) {
-    let out = document.querySelector('.screen');
+function addOnScreen(event) {
+
     let information = event.srcElement.textContent
     out.innerHTML = information;
     arrayScreen.push(information);
@@ -12,7 +13,13 @@ function deposit(event) {
 
 }
 
-document.querySelector('#seven').onclick = deposit;
+function clearScreen() {
+    arrayScreen.length = 0;
+    out.innerHTML = 0;
+}
+
+document.querySelector('#seven').onclick = addOnScreen;
+document.querySelector('.clear').onclick = clearScreen;
 
 
 
