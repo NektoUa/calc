@@ -84,12 +84,16 @@ display: inline;
 }
 
 .equal {
+  padding-top: 33px !important;
   height: 150px !important;
+  border-radius: 50px;
+  text-align: center;
 }
 
 .wide {
   width: 200px !important;
     border-radius: 50px;
+    height: 28px !important;
   padding: 30px 0;
 }
 

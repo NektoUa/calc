@@ -4,12 +4,16 @@ let arrayScreen = [];
 let out = document.querySelector('.screen');
 
 function addOnScreen(event) {
-
     let information = event.srcElement.textContent
-    out.innerHTML = information;
+    if (arrayScreen[0] == 0) {
+        arrayScreen.length = 0;
+    }
     arrayScreen.push(information);
-    console.log(event);
-    console.log(arrayScreen);
+    out.innerHTML = arrayScreen.join('')
+    console.log(arrayScreen)
+}
+
+function count() {
 
 }
 
@@ -18,8 +22,18 @@ function clearScreen() {
     out.innerHTML = 0;
 }
 
-document.querySelector('#seven').onclick = addOnScreen;
 document.querySelector('.clear').onclick = clearScreen;
+document.querySelector('.equal').onclick = count;
+
+let numbers = document.querySelectorAll(".numbers");
+numbers.forEach(function (entry) {
+    entry.addEventListener("click", function (event) {
+        addOnScreen(event);
+
+    });
+});
+
+
 
 
 
