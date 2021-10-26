@@ -5,35 +5,27 @@ let mathOperation = ['÷', '×', '-', '+'];
 let out = document.querySelector('.screen');
 let result;
 
+function firstSecondPoint() {
+
+}
+
+function pointZero() {
+    if (arrayScreen.length == 0) {
+        arrayScreen.push(0);
+    } else {
+        firstSecondPoint()
+    }
+}
 
 function addOnScreen(event) {
     let information = event.srcElement.textContent;
     let point = '.';
-    let zero = 0;
-    if (arrayScreen[0] == zero && arrayScreen.length < 1) {
-        arrayScreen.length = zero;
-    } else if (information == point) {
-        if (arrayScreen.length == zero) {
-            arrayScreen.push(zero);
-        } else {
-            for (let elem of arrayScreen) {
-                if (elem == point) { return }
-                else {
-                    arrayScreen.push(information);
-
-                }
-            }
-        }
+    if (information == point) {
+        pointZero()
     }
-
-
     arrayScreen.push(information);
     out.innerHTML = arrayScreen.join('');
     console.log(arrayScreen)
-}
-
-function pointZero(info) {
-
 }
 
 function switchOperation(operandLeft, operandRight, elem) {
@@ -67,12 +59,17 @@ function count() {
             }
         }
     }
+    arrScreenLen();
+    arrayScreen.push(result);
+    out.innerHTML = arrayScreen.join('');
+}
 
-    out.innerHTML = result
+function arrScreenLen() {
+    return arrayScreen.length = 0;
 }
 
 function clearScreen() {
-    arrayScreen.length = 0;
+    arrScreenLen()
     out.innerHTML = 0;
 }
 
