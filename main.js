@@ -64,11 +64,9 @@ function count() {
     out.innerHTML = arrayScreen.join('');
 }
 
-function arrScreenLen() {
-    return arrayScreen.length = 0;
-}
+let arrScreenLen = () => arrayScreen.length = 0;
 
-function clearScreen() {
+let clearScreen = () => {
     arrScreenLen()
     out.innerHTML = 0;
 }
@@ -82,6 +80,7 @@ numbers.forEach(function (entry) {
         addOnScreen(event);
     });
 });
+
 
 
 
