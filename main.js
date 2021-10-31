@@ -25,12 +25,8 @@ function addOnScreen(event) {
         pointZero()
     }
 
-    for (let elem of mathOperation) {
-        if (information == elem) {
-            for (let elem2 of mathOperation) {
-                if (lastElem == elem2) arrayScreen.pop()
-            }
-        }
+    if (mathOperation.includes(lastElem) && mathOperation.includes(information)) {
+        arrayScreen.pop()
     }
 
     arrayScreen.push(information);
