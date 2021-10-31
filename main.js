@@ -20,9 +20,19 @@ function pointZero() {
 function addOnScreen(event) {
     let information = event.srcElement.textContent;
     let point = '.';
+    let lastElem = arrayScreen[arrayScreen.length - 1];
     if (information == point) {
         pointZero()
     }
+
+    for (let elem of mathOperation) {
+        if (information == elem) {
+            for (let elem2 of mathOperation) {
+                if (lastElem == elem2) arrayScreen.pop()
+            }
+        }
+    }
+
     arrayScreen.push(information);
     out.innerHTML = arrayScreen.join('');
     console.log(arrayScreen)
