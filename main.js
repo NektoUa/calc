@@ -2,24 +2,24 @@
 
 let arrayScreen = [];
 let mathOperation = ['÷', '×', '-', '+'];
+let point = '.';
 let out = document.querySelector('.screen');
 let result;
 
 function firstSecondPoint() {
-
+    // arrayScreen.indexOf(point) != -1 ?  :
+    // console.log(arrayScreen.indexOf(point))
 }
 
+
+
 function pointZero() {
-    if (arrayScreen.length == 0) {
-        arrayScreen.push(0);
-    } else {
-        firstSecondPoint()
-    }
+    arrayScreen.length == 0 ? arrayScreen.push(0) : firstSecondPoint()
 }
 
 function addOnScreen(event) {
     let information = event.srcElement.textContent;
-    let point = '.';
+
     let lastElem = arrayScreen[arrayScreen.length - 1];
     if (information == point) {
         pointZero()
@@ -31,7 +31,6 @@ function addOnScreen(event) {
 
     arrayScreen.push(information);
     out.innerHTML = arrayScreen.join('');
-    console.log(arrayScreen)
 }
 
 function switchOperation(operandLeft, operandRight, elem) {
@@ -61,6 +60,9 @@ function count() {
             if (arrayScreen[i] == elem) {
                 operandLeft = arrayScreen.slice(0, i);
                 operandRight = arrayScreen.slice(i + 1);
+                if (operandRight[0] == 0 && operandRight.length == 1 && elem == mathOperation[0]) {
+                    return out.innerHTML = 'Impossible'
+                }
                 switchOperation(+operandLeft.join(''), +operandRight.join(''), elem)
             }
         }
@@ -77,7 +79,13 @@ let clearScreen = () => {
     out.innerHTML = 0;
 }
 
+let backSpace = () => {
+    arrayScreen.pop();
+    out.innerHTML = arrayScreen.join('');
+}
+
 document.querySelector('.clear').onclick = clearScreen;
+document.querySelector('#back').onclick = backSpace;
 document.querySelector('.equal').onclick = count;
 
 let numbers = document.querySelectorAll(".numbers");
