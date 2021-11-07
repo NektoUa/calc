@@ -8,7 +8,8 @@ let result;
 
 function firstSecondPoint() {
     for (let elem of mathOperation) {
-        if (arrayScreen.includes(elem)) {
+
+        if (arrayScreen.includes(elem) && !arrayScreen.includes(point, arrayScreen.indexOf(elem))) {
             return true
         }
     }
