@@ -7,22 +7,30 @@ let out = document.querySelector('.screen');
 let result;
 
 function firstSecondPoint() {
-    // arrayScreen.indexOf(point) != -1 ?  :
-    // console.log(arrayScreen.indexOf(point))
+    for (let elem of mathOperation) {
+        if (arrayScreen.includes(elem)) {
+            return true
+        }
+    }
 }
 
 
 
-function pointZero() {
-    arrayScreen.length == 0 ? arrayScreen.push(0) : firstSecondPoint()
+function pointZero(bool) {
+    arrayScreen.length == 0 ? arrayScreen.push(0) : (firstSecondPoint() == true) ? bool = true : bool = false;
+    return bool
 }
 
 function addOnScreen(event) {
     let information = event.srcElement.textContent;
-
     let lastElem = arrayScreen[arrayScreen.length - 1];
+
     if (information == point) {
-        pointZero()
+        let bool = true;
+        pointZero(bool)
+        if (!pointZero(bool) && arrayScreen.includes(point)) {
+            return
+        }
     }
 
     if (mathOperation.includes(lastElem) && mathOperation.includes(information)) {
@@ -48,12 +56,17 @@ function switchOperation(operandLeft, operandRight, elem) {
             result = operandLeft / operandRight;
             break;
     }
+
     return result
 }
 
 function count() {
     let operandLeft = [];
     let operandRight = [];
+
+    // let outRes = arrayScreen.join('').split(/\+|\-|\×|\÷/g);
+    // let operators = arrayScreen.join('').replace(/[0-9]|\./g, "").split("");
+    // console.log(operators, outRes)
 
     for (let i = 0; i < arrayScreen.length; i++) {
         for (let elem of mathOperation) {
@@ -67,6 +80,8 @@ function count() {
             }
         }
     }
+    !Number.isInteger(result) ? result = result.toFixed(3) : result;
+
     arrScreenLen();
     arrayScreen.push(result);
     out.innerHTML = arrayScreen.join('');
