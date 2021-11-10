@@ -8,14 +8,11 @@ let result;
 
 function firstSecondPoint() {
     for (let elem of mathOperation) {
-
         if (arrayScreen.includes(elem) && !arrayScreen.includes(point, arrayScreen.indexOf(elem))) {
             return true
         }
     }
 }
-
-
 
 function pointZero(bool) {
     arrayScreen.length == 0 ? arrayScreen.push(0) : (firstSecondPoint() == true) ? bool = true : bool = false;
@@ -64,10 +61,6 @@ function switchOperation(operandLeft, operandRight, elem) {
 function count() {
     let operandLeft = [];
     let operandRight = [];
-
-    // let outRes = arrayScreen.join('').split(/\+|\-|\×|\÷/g);
-    // let operators = arrayScreen.join('').replace(/[0-9]|\./g, "").split("");
-    // console.log(operators, outRes)
 
     for (let i = 0; i < arrayScreen.length; i++) {
         for (let elem of mathOperation) {
