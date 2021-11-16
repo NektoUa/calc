@@ -51,7 +51,8 @@ function switchOperation(operandLeft, operandRight, elem) {
             result = operandLeft * operandRight;
             break;
         case '÷':
-            result = operandLeft / operandRight;
+            operandRight == 0 ? result = 'Impossible' :
+                result = operandLeft / operandRight;
             break;
     }
 
@@ -67,9 +68,6 @@ function count() {
             if (arrayScreen[i] == elem) {
                 operandLeft = arrayScreen.slice(0, i);
                 operandRight = arrayScreen.slice(i + 1);
-                if (operandRight[0] == 0 && operandRight.length == 1 && elem == mathOperation[0]) {
-                    return out.innerHTML = 'Impossible'
-                }
                 switchOperation(+operandLeft.join(''), +operandRight.join(''), elem)
             }
         }
